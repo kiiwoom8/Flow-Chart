@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{tikz, incgraph}
-\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{shapes,arrows,positioning,decorations.text}
 \igrset{border=4cm}
 \tikzset{
     rounded_rec/.append style={
@@ -16,5 +16,15 @@
             ->,
             shorten >=10pt,
             shorten <=10pt
-        }
+        },
+    along/.style n args={1}{
+            postaction={decorate,decoration={text along path, text align=center, raise=.2cm, text={#1}}}
+        },
+    along_r/.style n args={1}{
+            postaction={decorate,decoration={text along path, reverse path, text align=center, raise=.2cm, text={#1}}}
+        },
+}
+
+\newcommand{\along}[1]{
+    postaction={decorate,decoration={text along path, text align=center, raise=.8cm, text={#1}}}
 }
