@@ -1,18 +1,28 @@
-\node[rounded_rec](cd){\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7101003/}{Cognitive Dissonance}};
-\node[rounded_rec, below left=of cd](ps){Problem-Solving};
-\node[rounded_rec, below right=of cd](gdb){Goal-Directed Behaviour};
-
-
-\node[rounded_rec, above=of ps](taf){
+\node[rounded_rec, above=of cd](mtot){
     \href{https://www.careershodh.com/atkinsons-theory-of-motivation/}{
         $
             \begin{aligned}
-                 & \text{Taf} =  \text{Maf} \times \text{Pf} \times \text{If} \\
+                \text{Mtot} = \text{Ts} - \text{Taf}
             \end{aligned}
         $
     }
 };
-\node[rounded_rec, above=of taf](def){
+\node[rounded_rec, above=of mtot](defm){
+    $
+        \begin{aligned}
+             & \text{Mtot} = \text{Total motivation} \\
+             & \text{Ts} = \text{Hope for success}   \\
+             & \text{Taf} = \text{Fear of failure}
+        \end{aligned}
+    $
+};
+
+\node[rounded_rec, above =of defm, yshift=6cm, align=center](atk){
+    Theory of achievement motivation\\
+    (John William Atkinson)
+};
+
+\node[rounded_rec, below left=of atk](def){
     $
         \begin{aligned}
              & \text{Taf} =  \text{Fear of failure}                             \\
@@ -22,21 +32,18 @@
         \end{aligned}
     $
 };
-\node[rounded_rec, above =of cd, yshift=4cm, align=center](atk){
-    Theory of achievement motivation\\
-    (John William Atkinson)
-};
 
-\node[rounded_rec, above=of gdb](ts){
+\node[rounded_rec, below=of def](taf){
     \href{https://www.careershodh.com/atkinsons-theory-of-motivation/}{
         $
             \begin{aligned}
-                 & \text{Ts} = \text{Ms} \times \text{Ps} \times \text{Is}
+                 & \text{Taf} =  \text{Maf} \times \text{Pf} \times \text{If} \\
             \end{aligned}
         $
     }
 };
-\node[rounded_rec, above=of ts](defs){
+
+\node[rounded_rec, below right=of atk](defs){
     $
         \begin{aligned}
              & \text{Ts} = \text{Hope for success}                              \\
@@ -47,5 +54,12 @@
     $
 };
 
-\node[rounded_rec, left=of ps](stress){Stress};
-\node[rounded_rec, right=of gdb](plea){Pleasure};
+\node[rounded_rec, below=of defs](ts){
+    \href{https://www.careershodh.com/atkinsons-theory-of-motivation/}{
+        $
+            \begin{aligned}
+                 & \text{Ts} = \text{Ms} \times \text{Ps} \times \text{Is} \\
+            \end{aligned}
+        $
+    }
+};

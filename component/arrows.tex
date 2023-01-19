@@ -5,14 +5,18 @@
 \path [arrow_default] (plea) edge (gdb);
 
 
-\path [arrow_default] (taf) edge (ps);
 \path [arrow_default] (def) edge (taf);
 
 \path [arrow_default] (atk) edge (def);
 \path [arrow_default] (atk) edge (defs);
 
-\path[arrow_default] (ts) edge (gdb);
 \path[arrow_default] (defs) edge (ts);
+\path[arrow_default] (mtot) edge (cd);
+\path[arrow_default] (defm) edge (mtot);
+\path[arrow_default] (taf) edge (defm);
+\path[arrow_default] (ts) edge (defm);
+\path[arrow_default] (ts) edge (defm);
+
 
 \draw[
     latex-latex,
