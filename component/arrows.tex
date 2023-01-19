@@ -7,4 +7,16 @@
 
 \path [arrow_default] (taf) edge (ps);
 \path [arrow_default] (def) edge (taf);
+
 \path [arrow_default] (atk) edge (def);
+\path [arrow_default] (atk) edge (defs);
+
+\path[arrow_default] (ts) edge (gdb);
+\path[arrow_default] (defs) edge (ts);
+
+\draw[
+    latex-latex,
+    bend right,
+    shorten >=5pt,
+    shorten <=5pt
+] (ps) to node[below]{Interlinked} (gdb);
